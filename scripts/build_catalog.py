@@ -420,6 +420,27 @@ def render_other_files(catalog: dict) -> None:
     (SITE / "sitemap.xml").write_text("\n".join(sitemap) + "\n", encoding="utf-8")
     # GitHub project Pages live in a subdirectory, so this robots file does
     # not control site-wide crawling; actual robots rules are host-root only.
+    (SITE / "robots.txt").write_text(
+        "# Informational only on GitHub project Pages (robots rules apply at host root).\n"
+        "User-agent: *\nAllow: /\n"
+        f"Sitemap: {SITE_URL}sitemap.xml\n", encoding="utf-8"
+    )
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--enrich", action="store_true", help="Fetch public GitHub repository metadata")
+    parser.add_argument("--no-enrich", action="store_true", help="Never call the GitHub API")
+    args = parser.parse_args()
+    token = os.environ.get("GITHUB_TOKEN")
+    enrich = not args.no_enrich and (args.enrich or bool(token))
+
+    catalog = build(README.read_text(encoding="utf-8"), enrich=enrich, token=token)
+    SITE.mkdir(parents=True, exist_ok=True)
+    (SITE / "catalog.json").write_text(
+        json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    )
+    (SITE / ".nojekyll").touch()
     render_homepage(catalog)
     render_other_files(catalog)
     enriched = sum(p["stars"] is not None for p in catalog["projects"])
