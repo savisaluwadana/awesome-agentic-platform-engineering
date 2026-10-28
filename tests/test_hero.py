@@ -34,7 +34,7 @@ class EditorialHeroTests(unittest.TestCase):
     def test_core_discovery_hooks_remain(self):
         for element_id in ("hero-heading", "heroProjectCount",
                            "heroCategoryCount", "directory", "agent-access",
-                           "projectList" if False else "productList"):
+                           "productList"):
             self.assertIn(element_id, self.page.ids)
         for marker in ("<!-- CATALOG:START -->", "<!-- CATALOG:END -->",
                        "<!-- SCHEMA:START -->", "<!-- SCHEMA:END -->"):
