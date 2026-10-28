@@ -33,7 +33,7 @@ Use one bullet per project; the dash in the example can also be an em dash. Incl
 
 `scripts/build_catalog.py` parses the README and generates `site/catalog.json`. It adds public repository metadata (stars, language, homepage, etc.) when GitHub API access is available. If the API is unavailable, the directory still builds, but unavailable metadata is omitted, not fabricated.
 
-The front end is static HTML, CSS, and JavaScript. There is no extra listing database. GitHub Actions runs on changes to the README or website and once per day to refresh GitHub stars.
+The front end is static HTML, CSS, and JavaScript. The build also generates individual indexable project/category pages, Schema.org JSON-LD, and agent-consumable JSON, Markdown, and NDJSON feeds. All listing descriptions originate in the README. There is no extra listing database. GitHub Actions runs on changes to the README or website and once per day to refresh GitHub stars.
 
 Run locally:
 
@@ -47,3 +47,7 @@ Then visit http://localhost:8000. To deploy, enable GitHub Pages with **GitHub A
 ## Moderation
 
 Maintainers may edit categories, remove broken or abandoned links, reject off-topic submissions, or correct misleading descriptions. Inclusion and ranking are editorial, not certifications or product recommendations. GitHub star counts are external social signals and not a substitute for security or technical evaluation.
+
+## Search and agent discoverability
+
+The site intentionally exposes crawlable HTML pages, stable canonical URLs, original source links, an XML sitemap, and a public dataset. Do not add fake review counts, unsupported claims, keyword stuffing, or off-topic AI-generated pages. Optional `llms.txt` navigation is not a Google Search ranking factor. Ensure descriptions remain factual and visible in the rendered HTML. Check the sitemap and Search Console after deployment.
