@@ -130,7 +130,12 @@ def build(markdown: str, enrich: bool = False, token: str | None = None) -> dict
     for p in projects:
         if p["category"] not in categories:
             categories.append(p["category"])
+    match = re.search(r"<!--\s*featured:\s*([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)\s*-->", markdown)
+    featured_id = match.group(1).replace("/", "-").lower() if match else None
+    if featured_id and not any(p["id"] == featured_id for p in projects):
+        raise ValueError("README featured project must be one of the directory entries")
     return {
+        "featuredId": featured_id, 
         "siteName": "Awesome Agentic Platform Engineering",
         "source": "https://github.com/savisaluwadana/awesome-agentic-platform-engineering",
         "generatedAt": datetime.now(timezone.utc).isoformat(),
