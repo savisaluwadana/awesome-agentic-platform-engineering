@@ -10,6 +10,8 @@ Agentic platform engineering is about giving developers and AI agents safe, obse
 
 ## Directory
 
+<!-- featured: openchoreo/openchoreo -->
+
 ### Agent Frameworks & Orchestration
 
 - [kagent](https://github.com/kagent-dev/kagent) — Cloud-native framework for building AI agents that help operate Kubernetes and platform infrastructure.
@@ -77,4 +79,4 @@ This is an independent, community-maintained resource, not a ranking of quality 
 
 ## License
 
-Content is shared under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). Contributions are made under the same terms.
+Licensing for the directory content and website code has not yet been selected by the maintainer. Please open an issue before assuming reuse rights.
