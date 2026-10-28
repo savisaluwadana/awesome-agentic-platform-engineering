@@ -37,38 +37,40 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 .button-outline{padding:11px 17px;background:white;color:var(--purple);border:1px solid #dcd7ff}
 .nav-submit{margin-left:10px}
 /* Editorial directory hero: information first, no simulated AI graphics. */
-  margin-top:28px;
-  padding:54px clamp(28px,4vw,60px);
-  display:grid;
-  grid-template-columns:minmax(0,1.36fr) minmax(310px,.84fr);
-  gap:clamp(30px,4vw,65px);
-  align-items:center;
-  background:#f2f4f9;
-  border:1px solid #e5e9f0;
-  border-radius:22px;
-  color:#1b2438;
-}
-  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
-  color:#737c90;font-size:10px;font-weight:800;letter-spacing:1.3px
-}
+.hero{margin-top:28px;padding:54px clamp(28px,4vw,60px);display:grid;grid-template-columns:minmax(0,1.36fr) minmax(310px,.84fr);gap:clamp(30px,4vw,65px);align-items:center;background:#f2f4f9;border:1px solid #e5e9f0;border-radius:22px;color:#1b2438}
+.hero-content{min-width:0;max-width:760px}
+.hero-eyebrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;color:#737c90;font-size:10px;font-weight:800;letter-spacing:1.3px}
 .eyebrow-rule{display:inline-block;background:#6458ed;width:18px;height:2px;flex:0 0 18px}
 .eyebrow-divider{color:#b0b6c3}
-  font-family:"Space Grotesk",sans-serif;
-  font-size:clamp(37px,4vw,58px);
-  line-height:1.08;letter-spacing:-2.5px;
-  font-weight:700;color:#182033;
-  margin:22px 0 20px;max-width:800px
-}
-  border:1px solid #e0e5ed;background:#fff;color:#667084;
-  border-radius:7px;padding:8px 10px;font-size:10px;font-weight:700
-}
+.hero h1{font-family:"Space Grotesk",sans-serif;font-size:clamp(37px,4vw,58px);line-height:1.08;letter-spacing:-2.5px;font-weight:700;color:#182033;margin:22px 0 20px;max-width:800px}
+.hero-accent{color:#5b51c6}
+.hero-description{max-width:665px;color:#5f6a7f;font-size:14px;line-height:1.85;margin:0}
+.hero-features{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:24px 0 0}
+.hero-features span{border:1px solid #e0e5ed;background:#fff;color:#667084;border-radius:7px;padding:8px 10px;font-size:10px;font-weight:700}
+.hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:22px;margin-top:28px}
+.hero-secondary{font-size:12px;font-weight:800;color:#544acc}
+.hero-secondary:hover{color:#33299f;text-decoration:underline;text-underline-offset:4px}
+.hero-secondary span{margin-left:4px}
+.hero-stats{display:flex;align-items:center;flex-wrap:wrap;gap:22px;margin-top:43px}
+.hero-stats>div{display:flex;flex-direction:column;gap:5px}
+.hero-stats strong{font-family:"Space Grotesk",sans-serif;font-size:25px;letter-spacing:-1px;color:#182033}
+.hero-stats span:not(.stat-divider){color:#7a8497;font-size:10px;font-weight:600}
 .stat-divider{width:1px;height:30px;background:#d8dce6}
-  background:#fff;border:1px solid #e5e8ef;border-radius:16px;
-  padding:28px 29px 25px;min-width:0;
-}
-  color:#20283c;font:700 24px/1.25 "Space Grotesk",sans-serif;
-  letter-spacing:-.8px;margin:17px 0 23px
-}
+.hero-panel{background:#fff;border:1px solid #e5e8ef;border-radius:16px;padding:28px 29px 25px;min-width:0}
+.hero-panel-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.hero-panel-kicker{color:#655bc4;font-size:10px;font-weight:800;letter-spacing:1.4px}
+.hero-panel-reference{color:#aab0bc;font:600 10px "Space Grotesk",sans-serif;letter-spacing:1px}
+.hero-panel h2{color:#20283c;font:700 24px/1.25 "Space Grotesk",sans-serif;letter-spacing:-.8px;margin:17px 0 23px}
+.hero-topics{border-top:1px solid #eceef3}
+.hero-topic{display:flex;gap:16px;align-items:flex-start;padding:17px 0;border-bottom:1px solid #eceef3}
+.hero-topic-number{color:#9189b9;font:700 11px "Space Grotesk",sans-serif;line-height:1.6;flex:0 0 20px}
+.hero-topic h3{font:700 13px/1.35 "Space Grotesk",sans-serif;letter-spacing:-.1px;margin:0;color:#222b3f}
+.hero-topic p{color:#7d8698;font-size:11px;line-height:1.65;margin:5px 0 0}
+.hero-panel-footer{padding-top:20px}
+.hero-panel-footer>span{font-size:9px;font-weight:800;letter-spacing:1.1px;color:#8b93a3}
+.hero-panel-footer>div{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px}
+.hero-panel-footer a{font-size:11px;font-weight:800;color:#5b51c6}
+.hero-panel-footer a:hover{text-decoration:underline;text-underline-offset:3px}
 
 .directory-section{padding:79px 0 62px}
 .directory-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:32px}
