@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101321">
+  <meta name="robots" content="index,follow,max-snippet:-1">
   <meta name="description" content="Discover open-source tools for agentic platform engineering: AI agents, Kubernetes, MCP, developer platforms, GitOps, security, and observability.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Awesome Agentic Platform Engineering">
@@ -12,6 +13,11 @@
   <meta property="og:url" content="https://savisaluwadana.github.io/awesome-agentic-platform-engineering/">
   <meta name="twitter:card" content="summary">
   <link rel="canonical" href="https://savisaluwadana.github.io/awesome-agentic-platform-engineering/">
+  <link rel="alternate" type="application/json" title="Agent-ready JSON catalog" href="./catalog.json">
+  <link rel="alternate" type="text/markdown" title="Project catalog in Markdown" href="./catalog.md">
+  <link rel="sitemap" type="application/xml" href="./sitemap.xml">
+  <!-- SCHEMA:START -->
+  <!-- SCHEMA:END -->
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +40,7 @@
       </a>
       <nav class="header-links" aria-label="Main navigation">
         <a href="#directory" class="header-link active">Discover</a>
-        <a href="#how-it-works" class="header-link">How it works</a>
+        <a href="#agent-access" class="header-link">For AI agents</a>
         <a href="https://github.com/savisaluwadana/awesome-agentic-platform-engineering" class="header-link" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
       </nav>
       <a class="button button-dark nav-submit" href="https://github.com/savisaluwadana/awesome-agentic-platform-engineering/edit/main/README.md" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">＋</span> Submit a project</a>
@@ -60,7 +66,7 @@
             <span class="stat-divider" aria-hidden="true"></span>
             <div><strong id="heroCategoryCount">—</strong><span>curated categories</span></div>
             <span class="stat-divider" aria-hidden="true"></span>
-            <div><strong>100%</strong><span>community-driven</span></div>
+            <div><strong>JSON</strong><span>agent-readable catalog</span></div>
           </div>
         </div>
         <div class="hero-visual" aria-hidden="true">
@@ -87,7 +93,7 @@
         <div class="discovery-layout">
           <aside class="categories-panel" aria-label="Project categories">
             <div class="panel-heading">BROWSE BY CATEGORY</div>
-            <div id="categoryNav" class="category-links"><span class="skeleton-line"></span><span class="skeleton-line"></span><span class="skeleton-line"></span></div>
+            <div id="categoryNav" class="category-links"><!-- NAV:START --><span class="skeleton-line"></span><span class="skeleton-line"></span><span class="skeleton-line"></span><!-- NAV:END --></div>
             <div class="category-footer"><span class="category-footer-icon">◎</span><div><strong>Made for builders</strong><p>No paywalls. No gatekeeping. Just the open ecosystem.</p></div></div>
           </aside>
 
@@ -108,30 +114,43 @@
             </div>
             <div class="result-header"><span id="resultsLabel" aria-live="polite">Browsing the directory</span><span class="result-source">◎ &nbsp; Synced from README</span></div>
             <div id="productList" class="product-list" aria-live="polite" aria-busy="true">
+              <!-- CATALOG:START -->
               <div class="loading-card"><span class="loading-spinner"></span> Loading the community catalog…</div>
+              <!-- CATALOG:END -->
             </div>
             <div id="emptyState" class="empty-state" hidden>
               <span class="empty-icon">⌕</span><h3>No projects found</h3><p>Try a different keyword or choose another category.</p><button id="clearFilters" class="button button-outline" type="button">Clear filters</button>
             </div>
           </div>
 
-          <aside class="editorial-panel" aria-label="About this directory">
-            <div class="spotlight-card" id="spotlightCard">
-              <span class="spotlight-eyebrow"><span>✦</span> CURATOR SPOTLIGHT</span>
-              <div class="spotlight-shape" aria-hidden="true"><span class="shape-ring shape-ring-one"></span><span class="shape-ring shape-ring-two"></span><span class="shape-core">✳</span></div>
-              <p class="spotlight-label">A project worth exploring</p>
-              <h3 id="spotlightName">Discover the ecosystem</h3>
-              <p id="spotlightDescription">Open-source projects doing the work behind modern developer infrastructure.</p>
-              <a id="spotlightLink" href="https://github.com/savisaluwadana/awesome-agentic-platform-engineering" target="_blank" rel="noopener noreferrer">Explore project <span aria-hidden="true">↗</span></a>
-            </div>
-            <div class="contribute-card">
-              <div class="contribute-symbol">＋</div>
-              <h3>Know a project we missed?</h3>
-              <p>Help map the ecosystem. Add an open-source tool to the README, and it appears here after review and merge.</p>
-              <a href="https://github.com/savisaluwadana/awesome-agentic-platform-engineering/edit/main/README.md" target="_blank" rel="noopener noreferrer">Suggest a project <span aria-hidden="true">↗</span></a>
-            </div>
-            <div class="transparency"><span class="transparency-icon">ⓘ</span> GitHub stars are not site votes or measures of technical quality. Listings are curated, not sponsored.</div>
-          </aside>
+
+        </div>
+      </section>
+
+      <section class="agent-section" id="agent-access" aria-labelledby="agent-access-heading">
+        <div class="agent-intro">
+          <span class="section-kicker"><span class="mini-line"></span> FOR ENGINEERS & AI AGENTS</span>
+          <h2 id="agent-access-heading">A directory your agent can actually read.</h2>
+          <p>The same community-curated README powers crawlable project pages, direct source citations, and stable machine-readable formats. No login, JavaScript execution, or API key is needed to read the published catalog.</p>
+        </div>
+        <div class="agent-formats">
+          <a href="./catalog.json" class="agent-format" type="application/json"><span class="format-icon">{ }</span><strong>JSON catalog</strong><span>Structured project records ↗</span></a>
+          <a href="./catalog.md" class="agent-format" type="text/markdown"><span class="format-icon">#</span><strong>Markdown catalog</strong><span>Readable project inventory ↗</span></a>
+          <a href="./catalog.ndjson" class="agent-format" type="application/x-ndjson"><span class="format-icon">≡</span><strong>NDJSON feed</strong><span>One project per line ↗</span></a>
+          <a href="./sitemap.xml" class="agent-format" type="application/xml"><span class="format-icon">⌘</span><strong>Project sitemap</strong><span>Individual crawlable URLs ↗</span></a>
+        </div>
+      </section>
+
+      <section class="answer-section" id="about-directory" aria-labelledby="answers-heading">
+        <div><span class="section-kicker"><span class="mini-line"></span> QUICK ANSWERS</span>
+          <h2 id="answers-heading">What is agentic platform engineering?</h2>
+          <p>Agentic platform engineering combines AI agent workflows with the tools and controls used to build, deploy, secure, observe, and operate software. It can include agent frameworks, MCP tool servers, Kubernetes platforms, GitOps controllers, telemetry, and policy enforcement. Not every platform tool in this directory is itself an AI agent.</p>
+        </div>
+        <div class="answer-detail">
+          <h3>How can an AI agent discover these projects?</h3>
+          <p>Read the <a href="./catalog.json">structured JSON catalog</a> or <a href="./catalog.md">Markdown directory</a>, then follow each project’s detail page and official GitHub repository for authoritative information. The <a href="./sitemap.xml">sitemap</a> enumerates public project pages for web crawlers.</p>
+          <h3>Who maintains the listings?</h3>
+          <p>Community contributors suggest projects through GitHub pull requests. The <a href="https://github.com/savisaluwadana/awesome-agentic-platform-engineering/blob/main/README.md">public README</a> controls listing names, categories, descriptions, and repository URLs. GitHub stars are external metadata, not votes or endorsements.</p>
         </div>
       </section>
 
@@ -148,6 +167,6 @@
     </div>
   </main>
 
-  <footer class="site-footer"><div class="container footer-inner"><div><div class="footer-brand">awesome<span>/</span>agentic</div><p>Open-source discovery for the next generation of platform engineering.</p></div><div class="footer-links"><a href="#directory">Directory</a><a href="https://github.com/savisaluwadana/awesome-agentic-platform-engineering/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">Contribute</a><a href="https://github.com/savisaluwadana/awesome-agentic-platform-engineering" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><div class="footer-end">Independent. Community-curated. Built in the open.</div></div></footer>
+  <footer class="site-footer"><div class="container footer-inner"><div><div class="footer-brand">awesome<span>/</span>agentic</div><p>Open-source discovery for the next generation of platform engineering.</p></div><div class="footer-links"><a href="#directory">Directory</a><a href="#agent-access">For AI agents</a><a href="https://github.com/savisaluwadana/awesome-agentic-platform-engineering/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">Contribute</a><a href="https://github.com/savisaluwadana/awesome-agentic-platform-engineering" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><div class="footer-end">Independent. Community-curated. Built in the open.</div></div></footer>
 </body>
 </html>

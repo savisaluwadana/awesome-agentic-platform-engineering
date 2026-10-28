@@ -10,8 +10,6 @@ Agentic platform engineering is about giving developers and AI agents safe, obse
 
 ## Directory
 
-<!-- featured: openchoreo/openchoreo -->
-
 ### Agent Frameworks & Orchestration
 
 - [kagent](https://github.com/kagent-dev/kagent) — Cloud-native framework for building AI agents that help operate Kubernetes and platform infrastructure.
@@ -60,7 +58,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for editorial criteria, local preview, an
 
 ## Website
 
-The website gives the list a searchable, filterable, mobile-friendly discovery interface with category navigation and GitHub star counts where available. **Stars are fetched from GitHub; they are not votes on this directory.** It doesn't require accounts, a database, or a paid hosting provider.
+The website gives the list a searchable, filterable, mobile-friendly discovery interface, crawlable detail pages, and GitHub star counts where available. **Stars are fetched from GitHub; they are not votes on this directory.** It doesn't require accounts, a database, or a paid hosting provider.
 
 The catalog is parsed from this README by `scripts/build_catalog.py`. GitHub Actions rebuilds and deploys the site when `main` changes, and refreshes project metadata on a schedule. GitHub Pages must be configured once under **Settings → Pages → Build and deployment → Source → GitHub Actions**.
 
@@ -72,6 +70,25 @@ python3 -m http.server 8000 --directory site
 ```
 
 Open `http://localhost:8000`. Metadata enrichments are optional: set `GITHUB_TOKEN` to avoid low unauthenticated API limits.
+
+## For AI agents, researchers, and answer engines
+
+The static website provides a **crawlable HTML page for every project and category**, plus public, machine-readable formats generated from this README. You don't need credentials or JavaScript to read them:
+
+- [Project directory](https://savisaluwadana.github.io/awesome-agentic-platform-engineering/) — HTML with visible, linked project entries even without JavaScript.
+- [JSON catalog](https://savisaluwadana.github.io/awesome-agentic-platform-engineering/catalog.json) — source repository, category, description, canonical project URL, and optional GitHub metadata.
+- [NDJSON catalog](https://savisaluwadana.github.io/awesome-agentic-platform-engineering/catalog.ndjson) — one project record per line, useful for ingestion.
+- [Markdown catalog](https://savisaluwadana.github.io/awesome-agentic-platform-engineering/catalog.md) — descriptive text with direct links to repository sources.
+- [Sitemap](https://savisaluwadana.github.io/awesome-agentic-platform-engineering/sitemap.xml) — stable internal project and category URLs.
+- [llms.txt](https://savisaluwadana.github.io/awesome-agentic-platform-engineering/llms.txt) — optional navigation hints for tools that choose to read it. This file **does not improve Google Search rankings**.
+
+Project and collection pages expose **Schema.org JSON-LD** matching publicly visible project descriptions. Every entry links back to its official GitHub source. Metadata may be missing when GitHub enrichment is unavailable; the site never invents counts, reviews, capabilities or endorsements.
+
+### AEO/GEO approach
+
+Our priority is accurate, citeable, first-party directory descriptions, semantic HTML, crawlable internal links, canonical URLs, and a maintained sitemap. These foundations support search and agent-based discovery. We do **not** claim special placement in AI answers or rely on AI-specific keyword stuffing. Google explicitly states there is no dedicated optimization required for its AI features beyond good SEO and that `llms.txt` has no Google ranking effect. See [Google Search Central's AI optimization guide](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide).
+
+After GitHub Pages is enabled, verify the deployed sitemap, set up Google Search Console, submit the sitemap, and monitor indexing and generative AI visibility. A generated `robots.txt` within a GitHub **project** Pages subpath is informational: robots directives are evaluated at the *host root*, not inside this repository subdirectory.
 
 ## Community & maintenance
 
