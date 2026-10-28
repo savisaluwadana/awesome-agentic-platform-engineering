@@ -49,40 +49,85 @@
 
   <main>
     <div class="container">
-      <section class="hero" id="top" aria-labelledby="hero-heading">
-        <div class="hero-grid" aria-hidden="true"></div>
-        <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
-        <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+      <section class="hero hero-clean" id="top" aria-labelledby="hero-heading">
         <div class="hero-content">
-          <div class="hero-eyebrow"><span class="pulse-dot"></span><span>OPEN SOURCE</span><span class="eyebrow-divider">/</span><span>CURATED BY THE COMMUNITY</span></div>
-          <h1 id="hero-heading">Explore the tools powering <span class="hero-gradient">agentic infrastructure.</span></h1>
-          <p class="hero-description">Find the projects connecting AI agents, Kubernetes, developer platforms, MCP, GitOps, security, and observability. One thoughtfully curated place to discover your next building block.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#directory">Explore projects <span aria-hidden="true">↗</span></a>
-            <a class="hero-secondary" href="https://github.com/savisaluwadana/awesome-agentic-platform-engineering" target="_blank" rel="noopener noreferrer">Star the GitHub repo <span aria-hidden="true">↗</span></a>
+          <div class="hero-eyebrow">
+            <span class="eyebrow-rule" aria-hidden="true"></span>
+            <span>OPEN-SOURCE DIRECTORY</span>
+            <span class="eyebrow-divider" aria-hidden="true">/</span>
+            <span>FOR ENGINEERS &amp; AI AGENTS</span>
           </div>
+
+          <h1 id="hero-heading">
+            Open-source tools for <span class="hero-accent">agentic platform engineering.</span>
+          </h1>
+
+          <p class="hero-description">
+            Explore frameworks, developer platforms, MCP tooling, GitOps, observability, and security projects in one community-curated directory. Built to be useful for engineers and readable by AI agents.
+          </p>
+
+          <div class="hero-features" aria-label="Directory features">
+            <span>Curated projects</span>
+            <span>Crawlable project pages</span>
+            <span>Open catalog data</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#directory">
+              Browse projects <span aria-hidden="true">↗</span>
+            </a>
+            <a class="hero-secondary" href="#agent-access">
+              Built for AI agents <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
           <div class="hero-stats" aria-label="Directory statistics">
             <div><strong id="heroProjectCount">—</strong><span>open-source projects</span></div>
             <span class="stat-divider" aria-hidden="true"></span>
             <div><strong id="heroCategoryCount">—</strong><span>curated categories</span></div>
             <span class="stat-divider" aria-hidden="true"></span>
-            <div><strong>JSON</strong><span>agent-readable catalog</span></div>
+            <div><strong>3</strong><span>machine-readable formats</span></div>
           </div>
         </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="visual-window">
-            <div class="visual-top"><span class="visual-dots"><i></i><i></i><i></i></span><span>the agentic stack</span><span class="visual-live"><i></i> EXPLORE</span></div>
-            <div class="visual-body">
-              <div class="visual-node node-agent"><span class="node-icon">✳</span><span><small>INTELLIGENCE</small><strong>AI agents & workflows</strong></span><span class="node-status">01</span></div>
-              <div class="visual-connection"><span></span><i></i><span></span></div>
-              <div class="visual-node node-tools"><span class="node-icon">⌘</span><span><small>INTEGRATION</small><strong>MCP & tool infrastructure</strong></span><span class="node-status">02</span></div>
-              <div class="visual-connection"><span></span><i></i><span></span></div>
-              <div class="visual-node node-platform"><span class="node-icon">⬡</span><span><small>FOUNDATION</small><strong>Cloud-native platforms</strong></span><span class="node-status">03</span></div>
+
+        <aside class="hero-panel" aria-label="What's in the directory">
+          <div class="hero-panel-top">
+            <span class="hero-panel-kicker">EXPLORE THE LANDSCAPE</span>
+            <span class="hero-panel-reference" aria-hidden="true">INDEX / 001</span>
+          </div>
+          <h2>Find the tools behind modern platforms.</h2>
+          <div class="hero-topics">
+            <div class="hero-topic">
+              <span class="hero-topic-number" aria-hidden="true">01</span>
+              <div>
+                <h3>AI agents &amp; orchestration</h3>
+                <p>Frameworks and workflows for agentic systems.</p>
+              </div>
             </div>
-            <div class="visual-foot"><span class="visual-trace">● &nbsp; DISCOVER → EVALUATE → BUILD</span><span>OSS / 2026</span></div>
+            <div class="hero-topic">
+              <span class="hero-topic-number" aria-hidden="true">02</span>
+              <div>
+                <h3>Cloud-native foundations</h3>
+                <p>Developer platforms, Kubernetes, and control planes.</p>
+              </div>
+            </div>
+            <div class="hero-topic">
+              <span class="hero-topic-number" aria-hidden="true">03</span>
+              <div>
+                <h3>Operations &amp; governance</h3>
+                <p>MCP tooling, GitOps, observability, and security.</p>
+              </div>
+            </div>
           </div>
-          <div class="floating-note"><span class="floating-icon">✦</span><span>Built by the ecosystem.<br><strong>For the ecosystem.</strong></span></div>
-        </div>
+          <div class="hero-panel-footer">
+            <span>EXPLORE THE OPEN DATA</span>
+            <div>
+              <a href="./catalog.json" type="application/json">JSON ↗</a>
+              <a href="./catalog.md" type="text/markdown">Markdown ↗</a>
+              <a href="./sitemap.xml" type="application/xml">Sitemap ↗</a>
+            </div>
+          </div>
+        </aside>
       </section>
 
       <section class="directory-section" id="directory" aria-labelledby="directory-title">
