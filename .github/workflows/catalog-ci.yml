@@ -1,0 +1,29 @@
+name: Validate catalog contributions
+
+on:
+  pull_request:
+    paths:
+      - README.md
+      - CONTRIBUTING.md
+      - scripts/**
+      - tests/**
+      - site/**
+      - .github/workflows/**
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate README catalog format
+        run: python -m unittest discover -s tests -v
+      - name: Build static catalog
+        run: python scripts/build_catalog.py --no-enrich
+      - name: Check generated catalog
+        run: python -c "import json; x=json.load(open('site/catalog.json')); assert x['total'] > 0; print(x['total'], 'entries validated')"
