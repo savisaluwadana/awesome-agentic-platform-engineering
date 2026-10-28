@@ -216,10 +216,26 @@ def homepage_schema(catalog: dict) -> dict:
     }
 
 
+
+def homepage_navigation(catalog: dict) -> str:
+    links = [
+        '<a class="category-button active" href="#directory">'
+        '<span class="category-name">▦ All projects</span></a>'
+    ]
+    for cat in catalog["categories"]:
+        url = SITE_URL + "categories/" + slugify(cat) + "/"
+        links.append(
+            f'<a class="category-button" href="{escaped(url)}">'
+            f'<span class="category-name">{escaped(cat)}</span></a>'
+        )
+    return "\n".join(links)
+
+
 def render_homepage(catalog: dict) -> None:
     index = SITE / "index.html"
     html = index.read_text(encoding="utf-8")
     html = replacement_between(html, "CATALOG", home_item_list(catalog))
+    html = replacement_between(html, "NAV", homepage_navigation(catalog))
     html = replacement_between(html, "SCHEMA", '<script type="application/ld+json">'
                                 + json_script(homepage_schema(catalog)) + "</script>")
     index.write_text(html, encoding="utf-8")
